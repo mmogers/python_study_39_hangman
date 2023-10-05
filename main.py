@@ -2,7 +2,7 @@ import random, os, time
 
 listOfWords = ["british", "computer", "grave", "accent", "past", "genius", "wall", "apple", "tree", "household"]
 myWord = random.choice(listOfWords).lower()
-print(f"myWord = {myWord}\n")
+#print(f"myWord = {myWord}\n")
 
 myWordLength = len(myWord) 
 lifeCount = 7
@@ -11,7 +11,7 @@ word = []
 #initializing a word array with "_"
 for index in range (myWordLength):
   word.append("_")
-print(f"word = {word}")
+
 
 #how many time the letter appears in the word
 def howManyTimes (letter, myWord):
@@ -105,7 +105,7 @@ while guessedLetters < myWordLength and lifeCount > 0:
     #time.sleep(1)
 if lifeCount == 0: #no more attempts
   os.system("clear")
-  print(f"You've lost the game !, the word was - {myWord}")
+  print(f"You've lost the game ! The word was - {myWord}")
   printHangman(lifeCount)
 elif guessedLetters == myWordLength: #all the letters of the word were guessed
   os.system("clear")
